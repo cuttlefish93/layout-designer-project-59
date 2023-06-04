@@ -1,0 +1,11 @@
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+html {
+  border: none;
+}
+
+.chat {
+  height: calc(100vh - 24px * 2);
+  border-radius: 1rem;
+  padding: 0;
+}

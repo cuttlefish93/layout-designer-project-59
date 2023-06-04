@@ -62,7 +62,7 @@ const html = () => {
 }
 
 const css = () => {
-  return src(path.src.css, { base: `${srcPath}scss/` })
+  return src(path.src.css)
     .pipe(plumber({
       errorHandler: function (err) {
         notify.onError({
@@ -75,6 +75,7 @@ const css = () => {
     .pipe(sass())
     .pipe(autoprefixer())
     .pipe(cssbeautify())
+    .pipe(concat('styles.css'))
     .pipe(dest(path.build.css))
     .pipe(cssnano({
       zindex: false,
@@ -87,6 +88,7 @@ const css = () => {
       suffix: '.min',
       extname: '.css'
     }))
+    .pipe(concat('styles.min.css'))
     .pipe(dest(path.build.css))
     .pipe(browserSync.reload({ stream: true }));
 }

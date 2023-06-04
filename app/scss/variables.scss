@@ -1,0 +1,61 @@
+/* Colors */
+$blue: #4545A5;
+$gray-600: #6C757D;
+$green: #28A745;
+$cyan: #17A2B8;
+$yellow: #FFC107;
+$red: #DC3545;
+$gray-100: #FBFBFB;
+$gray-900: #343A40;
+$gray: #E5E5E5;
+
+$primary:       $blue;
+$secondary:     $gray-600;
+$success:       $green;
+$info:          $cyan;
+$warning:       $yellow;
+$danger:        $red;
+$light:         $gray-100;
+$dark:          $gray-900;
+
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark
+);
+
+$custom-colors: (
+  "gray": #EFEFEF
+);
+
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+/* Breakpoints */
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1600px
+);
+
+/* Containers */
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1540px
+);
+
+/* Enable box-shadows */
+$enable-shadows: true;
+
+/* Change var for body background color */
+$body-bg: $gray;
