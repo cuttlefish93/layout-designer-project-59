@@ -30,13 +30,13 @@ const path = {
   },
   src: {
     html: `${srcPath}*.pug`,
-    css: `${srcPath}scss/**/*.scss`,
+    css: `${srcPath}scss/*.scss`,
     js: `${srcPath}js/**/*.js`,
     images: `${srcPath}images/**/*.{jpg,png,svg,gif,ico,webp,webmanifest,xml,json}`,
     fonts: `${srcPath}fonts/**/*.{eot,woff,woff2,ttf,svg}`
   },
   watch: {
-    html: `${srcPath}*.pug`,
+    html: `${srcPath}**/*.pug`,
     css: `${srcPath}scss/**/*.scss`,
     js: `${srcPath}js/**/*.js`,
     images: `${srcPath}images/**/*.{jpg,png,svg,gif,ico,webp,webmanifest,xml,json}`,
@@ -72,7 +72,7 @@ const css = () => {
         this.emit('end');
       }
     }))
-    .pipe(sass())
+    .pipe(sass.sync())
     .pipe(autoprefixer())
     .pipe(cssbeautify())
     .pipe(concat('styles.css'))
@@ -149,7 +149,7 @@ const clean = () => {
   return del(path.clean);
 }
 
-const build = series(clean, parallel(html, css, js, images, fonts));
+const build = series(clean, html, css, js, images, fonts);
 const watching = parallel(build, watchFiles, server);
 
 exports.html = html;

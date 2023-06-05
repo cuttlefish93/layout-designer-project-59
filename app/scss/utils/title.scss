@@ -1,0 +1,20 @@
+.title-1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: $color-title;
+
+  @include media-breakpoint-up(md) {
+    font-size: 2rem;
+  }
+}
+
+.title-2 {
+  color: $color-title;
+  font-weight: 700;
+}
+
+.title-3 {
+  color: $gray-600;
+  font-size: 0.875rem;
+}

@@ -1,0 +1,60 @@
+.nav {
+  background-color: $blue;
+  column-gap: 2.5rem;
+  align-items: center;
+  justify-content: flex-end;
+
+  &-item:first-child {
+    margin-right: auto;
+  }
+
+  .logo {
+    @include avatar-image(15px, 25px, 0);
+  }
+
+  .nav-pills &-link {
+    color: $gray-100;
+    font-size: 0.875rem;
+    border-radius: 0;
+    padding: 0;
+
+    &.active {
+      background-color: transparent;
+      color: $gray-500;
+    }
+
+    &>img {
+      @include avatar-image(25px, 25px, 0);
+    }
+
+    &>p {
+      margin-bottom: 0;
+      display: none;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    border-radius: 16px 0px 0px 0px;
+    justify-content: flex-start;
+    column-gap: 1.8rem;
+
+    &-item:first-child {
+      margin-right: 0;
+    }
+
+    .logo {
+      @include avatar-image(25px, 40px, 0);
+    }
+
+    .nav-pills &-link {
+
+      & > img {
+        margin-right: 0.5rem;
+      }
+
+      & > p {
+        display: inline-block;
+      }
+    }
+  }
+}

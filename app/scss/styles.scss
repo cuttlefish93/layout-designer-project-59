@@ -1,7 +1,11 @@
 @import "../../node_modules/bootstrap/scss/bootstrap";
 @import 'mixins';
+@import 'utils/title';
+@import 'utils/avatar';
+@import 'components/nav';
 @import 'components/contacts';
 @import 'components/search-panel';
+@import 'components/chats';
 
 :root {
   border: none;
@@ -17,21 +21,41 @@
   }
 
   &-aside {
-    border-right: 1px solid $gray;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
 
-    &>aside {
+    &-nav {
+      order: 2;
+    }
+
+    &-main {
       height: 100%;
       @include hide-scrollbar();
+      order: 1;
     }
+  }
+
+  &-main {
+    display: none;
   }
 
   @include media-breakpoint-up(md) {
     height: calc(100vh - 24px * 2);
     border-radius: 1rem;
+
+    &-aside {
+      display: block;
+      border-right: 1px solid $gray;
+    }
+
+    &-main {
+      display: block;
+    }
   }
 }
 
-[class^=col] {
+.col-12 {
   padding: 0;
   height: 100%;
 }

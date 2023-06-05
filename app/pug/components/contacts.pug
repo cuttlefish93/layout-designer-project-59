@@ -36,17 +36,17 @@
     }],
   }
 
-section.contacts
-  h2.contacts-title Контакты
+section#pills-contacts.contacts.tab-pane.active(role="tabpanel", aria-labelledby="pills-contacts-tab")
+  h2.contacts-title.title-1 Контакты
   include search-panel.pug
-  ul.contacts-list.list-unstyled
+  ul.contacts-list.list-unstyled.pb-5
     each users, char in contacts
       li.contacts-list-item.pt-5
         p.contacts-list-char= char
         each user in users
           a.contact.px-3.py-4.text-decoration-none.d-flex.align-items-center.column-gap-4.shadow-sm(href='#')
-            img.contact-avatar(src=user.avatar)
+            img.contact-avatar.avatar-sm(src=user.avatar)
             div.contact-info
-              p.contact-name= user.name
-              p.contact-status= user.status
+              p.contact-name.title-2= user.name
+              p.contact-status.title-3= user.status
 

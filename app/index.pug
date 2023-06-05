@@ -10,14 +10,15 @@ html(lang="en")
     .chat.container-xxl.bg-white
       .row.chat-row
         .col-12.col-md-4.chat-aside
-          header.header
-          aside.px-4.py-5.overflow-scroll
+          include pug/components/nav.pug
+          aside#pills-tabContent.px-4.py-5.overflow-scroll.tab-content.chat-aside-main
             include pug/components/contacts.pug
-            .chats-list
-            .profile
+            include pug/components/chats.pug
+            include pug/components/profile.pug
         .col-12.col-md-8.chat-main
           .greet-section.d-flex.flex-column.justify-content-center.align-items-center
             img.greet-section-avatar(src="images/avatar_1.jpg")
             p.greet-section-greet Привет, #[span Кодовёнок]
             p.greet-section-text Выбери чат, чтобы начать общаться
+    script(src='js/index.min.js' type='module')
 
