@@ -7,14 +7,17 @@ html(lang="en")
     title Document
     link(rel="stylesheet", href="css/styles.min.css")
   body.p-md-4
-    .chat.container-xxl.overflow-hidden
-      .row
-        .col.col-4
+    .chat.container-xxl.bg-white
+      .row.chat-row
+        .col-12.col-md-4.chat-aside
           header.header
-          aside.px-4.py-5
-            .contacts
+          aside.px-4.py-5.overflow-scroll
+            include pug/components/contacts.pug
             .chats-list
             .profile
-        .col.col-8
-          .greet-section
+        .col-12.col-md-8.chat-main
+          .greet-section.d-flex.flex-column.justify-content-center.align-items-center
+            img.greet-section-avatar(src="images/avatar_1.jpg")
+            p.greet-section-greet Привет, #[span Кодовёнок]
+            p.greet-section-text Выбери чат, чтобы начать общаться
 

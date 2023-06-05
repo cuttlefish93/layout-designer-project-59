@@ -1,0 +1,69 @@
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+@import '../variables';
+@import '../mixins';
+
+.contacts {
+
+  &-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: $gray-900;
+  }
+
+  &-list {
+    margin-bottom: 0;
+
+    &-char {
+      color: $gray-600;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    &-title {
+      font-size: 2rem;
+    }
+  }
+}
+
+.contact {
+  margin-bottom: 0.8rem;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  &:hover {
+    background-color: $blue;
+
+    & .contact-name {
+      color: $gray-100;
+    }
+
+    & .contact-status {
+      color: $gray;
+    }
+  }
+
+  &-avatar {
+    @include avatar-image(50px, 50px, 50%);
+  }
+
+  &-info {
+
+    & > p {
+      margin-bottom: 0;
+    }
+
+  }
+
+  &-name {
+    color: $gray-900;
+    font-weight: 700;
+  }
+
+  &-status {
+    color: $gray-600;
+    font-size: 0.8rem;
+  }
+}

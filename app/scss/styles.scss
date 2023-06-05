@@ -1,11 +1,60 @@
 @import "../../node_modules/bootstrap/scss/bootstrap";
+@import 'mixins';
+@import 'components/contacts';
+@import 'components/search-panel';
 
-html {
+:root {
   border: none;
 }
 
 .chat {
-  height: calc(100vh - 24px * 2);
-  border-radius: 1rem;
+  height: 100vh;
   padding: 0;
+
+  &-row {
+    margin: 0;
+    height: 100%;
+  }
+
+  &-aside {
+    border-right: 1px solid $gray;
+
+    &>aside {
+      height: 100%;
+      @include hide-scrollbar();
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    height: calc(100vh - 24px * 2);
+    border-radius: 1rem;
+  }
+}
+
+[class^=col] {
+  padding: 0;
+  height: 100%;
+}
+
+.greet-section {
+  height: 100%;
+
+  & > p {
+    margin-bottom: 0;
+  }
+
+  &-avatar {
+    @include avatar-image(200px, 200px, 100px);
+    margin-bottom: 1.125rem;
+  }
+
+  &-greet {
+    color: $gray-800;
+    font-weight: 700;
+  }
+
+  &-text {
+    font-size: 0.8rem;
+    color: $gray-600;
+  }
 }

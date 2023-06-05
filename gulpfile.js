@@ -23,24 +23,24 @@ const buildPath = 'build/';
 const path = {
   build: {
     html: buildPath,
-    css: `${buildPath}/css/`,
-    js: `${buildPath}/js/`,
-    images: `${buildPath}/images/`,
-    fonts: `${buildPath}/fonts/`
+    css: `${buildPath}css/`,
+    js: `${buildPath}js/`,
+    images: `${buildPath}images/`,
+    fonts: `${buildPath}fonts/`
   },
   src: {
-    html: `${srcPath}/*.pug`,
-    css: `${srcPath}/scss/**/*.scss`,
-    js: `${srcPath}/js/**/*.js`,
-    images: `${srcPath}/images/**/*.{jpg,png,svg,gif,ico,webp,webmanifest,xml,json}`,
-    fonts: `${srcPath}/fonts/**/*.{eot,woff,woff2,ttf,svg}`
+    html: `${srcPath}*.pug`,
+    css: `${srcPath}scss/**/*.scss`,
+    js: `${srcPath}js/**/*.js`,
+    images: `${srcPath}images/**/*.{jpg,png,svg,gif,ico,webp,webmanifest,xml,json}`,
+    fonts: `${srcPath}fonts/**/*.{eot,woff,woff2,ttf,svg}`
   },
   watch: {
-    html: `${srcPath}/*.pug`,
-    css: `${srcPath}/scss/**/*.scss`,
-    js: `${srcPath}/js/**/*.js`,
-    images: `${srcPath}/images/**/*.{jpg,png,svg,gif,ico,webp,webmanifest,xml,json}`,
-    fonts: `${srcPath}/fonts/**/*.{eot,woff,woff2,ttf,svg}`
+    html: `${srcPath}*.pug`,
+    css: `${srcPath}scss/**/*.scss`,
+    js: `${srcPath}js/**/*.js`,
+    images: `${srcPath}images/**/*.{jpg,png,svg,gif,ico,webp,webmanifest,xml,json}`,
+    fonts: `${srcPath}fonts/**/*.{eot,woff,woff2,ttf,svg}`
   },
   clean: `./${buildPath}`
 }
@@ -48,7 +48,7 @@ const path = {
 const server = () => {
   browserSync.init({
     server: {
-      baseDir: `./${buildPath}`
+      baseDir: `${buildPath}`
     }
   });
 }
@@ -158,8 +158,9 @@ exports.js = js;
 exports.images = images;
 exports.fonts = fonts;
 exports.clean = clean;
+exports.server = server;
 exports.build = build;
-exports.watch = watching;
+exports.watch = watchFiles;
 exports.default = watching;
 
 

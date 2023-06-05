@@ -7,7 +7,7 @@ $yellow: #FFC107;
 $red: #DC3545;
 $gray-100: #FBFBFB;
 $gray-900: #343A40;
-$gray: #E5E5E5;
+$gray: #EFEFEF;
 
 $primary:       $blue;
 $secondary:     $gray-600;
@@ -30,7 +30,7 @@ $theme-colors: (
 );
 
 $custom-colors: (
-  "gray": #EFEFEF
+  "gray": $gray
 );
 
 $theme-colors: map-merge($theme-colors, $custom-colors);
@@ -58,4 +58,4 @@ $container-max-widths: (
 $enable-shadows: true;
 
 /* Change var for body background color */
-$body-bg: $gray;
+$body-bg: #E5E5E5;
