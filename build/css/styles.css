@@ -13969,6 +13969,59 @@ textarea.form-control-lg {
     font-size: 0.875rem;
 }
 
+.profile-card {
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+    padding: 1rem;
+    margin-top: 4rem;
+}
+
+.profile-card-avatar {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+}
+
+.profile-card-body {
+    padding: 0;
+}
+
+.profile-card-title {
+    font-size: 1rem;
+}
+
+.profile-card-text {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+@media (min-width: 768px) {
+    .profile-card {
+        padding: 2.5rem 1rem;
+    }
+}
+
+.profile-list-item {
+    background-color: #fff;
+    border-bottom: 1px solid #EFEFEF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile-list-info {
+    font-size: 0.875rem;
+}
+
+.profile-list-info-header {
+    margin: 0;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.profile-list-info-footer {
+    margin: 0;
+}
+
 :root {
     border: none;
 }
