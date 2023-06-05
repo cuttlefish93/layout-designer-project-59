@@ -38,7 +38,8 @@
 
 section#pills-contacts.contacts.tab-pane.active(role="tabpanel", aria-labelledby="pills-contacts-tab")
   h2.contacts-title.title-1 Контакты
-  include search-panel.pug
+  form(action="#")
+    input.form-control.search-input.bg-white(type="text", placeholder="Поиск по контактам")
   ul.contacts-list.list-unstyled.pb-5
     each users, char in contacts
       li.contacts-list-item.pt-5

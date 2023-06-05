@@ -1,6 +1,7 @@
 section#pills-chats.tab-pane.chats(role="tabpanel" aria-labelledby="pills-chats-tab")
   h2.title-1.chats-title Чаты
-  include search-panel.pug
+  form(action="#")
+    input.form-control.search-input.bg-white(type="text", placeholder="Поиск по сообщениям")
   ul.list-unstyled.chats-list.py-5
     li.chats-list-item
       a.chat-card.text-decoration-none.shadow-sm.d-flex.align-items-center.column-gap-4
