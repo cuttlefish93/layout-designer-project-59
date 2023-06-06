@@ -85,5 +85,10 @@
 
   @include media-breakpoint-up(md) {
     display: block;
+    margin-top: -0.5rem;
+
+    &-avatar {
+      margin-bottom: 1rem;
+    }
   }
 }

@@ -23,6 +23,9 @@
     @include hide-scrollbar();
     height: calc(100% - 94px - 72px);
     padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
   }
 
   &-footer {
@@ -48,9 +51,9 @@
 }
 
 .message {
+  width: 100%;
   display: flex;
   column-gap: 1rem;
-  margin-bottom: 1rem;
 
   &:last-child {
     margin-bottom: 0;
@@ -62,6 +65,7 @@
   }
 
   &-body {
+    padding: 1.25rem;
 
     &-header {
       font-size: 1rem;
@@ -112,12 +116,18 @@
   }
 
   @include media-breakpoint-up(md) {
+    width: 75%;
+
     &-img {
       display: block;
     }
 
+    &.message-alien {
+      align-self: flex-start;
+    }
+
     &.message-user {
-      margin-left: 13rem;
+      align-self: flex-end;
     }
 
     &-body {

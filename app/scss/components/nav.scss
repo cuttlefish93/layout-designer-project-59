@@ -3,6 +3,7 @@
   column-gap: 2.5rem;
   align-items: center;
   justify-content: flex-end;
+  padding: 1.5rem;
 
   &-item:first-child {
     margin-right: auto;
@@ -24,7 +25,7 @@
     }
 
     &>img {
-      @include avatar-image(25px, 25px, 0);
+      @include avatar-image(22px, 22px, 0);
     }
 
     &>p {
@@ -34,21 +35,18 @@
   }
 
   @include media-breakpoint-up(md) {
-    justify-content: flex-start;
     column-gap: 1.8rem;
-
-    &-item:first-child {
-      margin-right: 0;
-    }
+    padding: 1rem 2rem 1rem 1rem;
 
     .logo {
-      @include avatar-image(25px, 40px, 0);
+      @include avatar-image(20px, 40px, 0);
     }
 
     .nav-pills &-link {
 
       & > img {
-        margin-right: 0.5rem;
+        margin-right: 5px;
+        @include avatar-image(20px, 22px, 0);
       }
 
       & > p {

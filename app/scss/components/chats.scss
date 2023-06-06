@@ -1,9 +1,24 @@
 .chats {
+
+  &-list {
+    padding: 3rem 0;
+  }
+
   &-list-item {
     margin-bottom: 1rem;
 
     &:last-of-type {
       margin-bottom: 0;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    &-title {
+      margin-bottom: 0.625rem;
+    }
+
+    &-list {
+      padding: 2.25rem 0 3rem;
     }
   }
 }

@@ -1,3 +1,10 @@
+.profile {
+  @include media-breakpoint-up(md) {
+    &-title {
+      margin-bottom: 0.625rem;
+    }
+  }
+}
 .profile-card {
   box-shadow: none;
   border: none;
@@ -7,6 +14,7 @@
 
   &-avatar {
     @include avatar-image(90px, 90px, 50%);
+    margin-bottom: 1rem;
   }
 
   &-body {
@@ -15,6 +23,7 @@
 
   &-title {
     font-size: 1rem;
+    margin-bottom: 1rem;
   }
 
   &-text {
@@ -22,7 +31,16 @@
   }
 
   @include media-breakpoint-up(md) {
+    margin-top: 2.125rem;
     padding: 2.5rem 1rem;
+
+    &-avatar {
+      margin-bottom: 1.125rem;
+    }
+
+    &-title {
+      margin-bottom: 1.125rem;
+    }
   }
 }
 
@@ -45,6 +63,14 @@
 
     &-footer {
       margin: 0;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    padding: 1.5rem;
+
+    &-item {
+      margin-bottom: 0.5rem;
     }
   }
 }
