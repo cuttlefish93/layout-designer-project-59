@@ -14015,7 +14015,6 @@ textarea.form-control-lg {
     border-radius: 50%;
 }
 
-/* Utilities to create border-radius classes*/
 .nav {
     background-color: #4545A5;
     -moz-column-gap: 2.5rem;
@@ -14059,7 +14058,6 @@ textarea.form-control-lg {
 
 @media (min-width: 768px) {
     .nav {
-        border-radius: 16px 0px 0px 0px;
         justify-content: flex-start;
         -moz-column-gap: 1.8rem;
         column-gap: 1.8rem;
@@ -14128,7 +14126,6 @@ textarea.form-control-lg {
 /* Change var for body background color */
 .search-input {
     padding: 1.5rem;
-    border-bottom: 1px solid #EFEFEF;
     color: #6C757D;
     border-radius: unset;
     box-shadow: none;
@@ -14210,7 +14207,6 @@ textarea.form-control-lg {
 
 .profile-list-item {
     background-color: #fff;
-    border-bottom: 1px solid #EFEFEF;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -14270,22 +14266,20 @@ textarea.form-control-lg {
 }
 
 .chat-main {
-    display: none;
+    height: 0;
 }
 
 @media (min-width: 768px) {
     .chat {
         height: calc(100vh - 48px);
-        border-radius: 1rem;
     }
 
     .chat-aside {
         display: block;
-        border-right: 1px solid #EFEFEF;
     }
 
     .chat-main {
-        display: block;
+        height: 100%;
     }
 }
 
@@ -14296,6 +14290,7 @@ textarea.form-control-lg {
 
 .greet-section {
     height: 100%;
+    display: none;
 }
 
 .greet-section > p {

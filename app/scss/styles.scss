@@ -37,7 +37,7 @@
   }
 
   &-main {
-    display: none;
+    height: 0;
   }
 
   @include media-breakpoint-up(md) {
@@ -48,7 +48,7 @@
     }
 
     &-main {
-      display: block;
+      height: 100%;
     }
   }
 }
@@ -60,6 +60,7 @@
 
 .greet-section {
   height: 100%;
+  display: none;
 
   & > p {
     margin-bottom: 0;
