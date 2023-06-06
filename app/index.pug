@@ -4,7 +4,7 @@ html(lang="en")
     meta(charset="UTF-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    title Document
+    title Hexlet Chat - Main page
     link(rel="stylesheet", href="css/styles.min.css")
   body.p-md-4
     .chat.container-xxl.bg-white.radius-md
@@ -16,7 +16,7 @@ html(lang="en")
             include pug/components/chats.pug
             include pug/components/profile.pug
         .col-12.col-md-8.chat-main
-          .greet-section.d-md-flex.flex-column.justify-content-center.align-items-center
+          section.greet-section.d-md-flex.flex-column.justify-content-center.align-items-center
             img.greet-section-avatar(src="images/avatar_1.jpg")
             p.greet-section-greet Привет, #[span Кодовёнок]
             p.greet-section-text Выбери чат, чтобы начать общаться

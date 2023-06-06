@@ -2,13 +2,20 @@
 @import 'mixins';
 @import 'utilities/utilities';
 @import 'components/nav';
+@import 'components/nav-chat-page';
 @import 'components/contacts';
 @import 'components/search-panel';
 @import 'components/chats';
 @import 'components/profile';
+@import 'components/dialog';
 
 :root {
   border: none;
+}
+
+.col-12 {
+  padding: 0;
+  height: 100%;
 }
 
 .chat {
@@ -53,11 +60,6 @@
   }
 }
 
-.col-12 {
-  padding: 0;
-  height: 100%;
-}
-
 .greet-section {
   height: 100%;
   display: none;
@@ -79,5 +81,9 @@
   &-text {
     font-size: 0.8rem;
     color: $gray-600;
+  }
+
+  @include media-breakpoint-up(md) {
+    display: block;
   }
 }

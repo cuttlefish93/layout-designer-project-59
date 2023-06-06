@@ -1,7 +1,11 @@
 nav.chat-aside-nav
-  ul#pills-tab.nav.nav-pills.p-4.p-md-3.radius-left-top-md(role="tablist")
+  ul#pills-tab.nav.nav-pills.p-4.p-md-3.chat-aside-nav.radius-left-top-md(role="tablist")
     li.nav-item
       img.logo(src='../../images/icons/logo.svg')
+    li.nav-item.current-chat-nav-item(role="presentation")
+      a#pills-current-chat-tab.nav-link(href='#current-chat' data-bs-toggle="pill", data-bs-target="#current-chat", type="button", role="tab", aria-controls="pills-current-chat", aria-selected="false")
+        img(src='../../images/icons/chat-left-text.svg')
+        p Диалоги
     li.nav-item(role="presentation")
       a#pills-contacts-tab.nav-link(href='#contacts' data-bs-toggle="pill", data-bs-target="#contacts", type="button", role="tab", aria-controls="pills-contacts", aria-selected="false")
         img(src='../../images/icons/people.svg')

@@ -1,0 +1,7 @@
+.current-chat-nav-item {
+  display: list-item;
+
+  @include media-breakpoint-up(md) {
+    display: none;
+  }
+}

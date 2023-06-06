@@ -1,0 +1,21 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Hexlet Chat - Chat page
+    link(rel="stylesheet", href="css/styles.min.css")
+  body.p-md-4
+    .chat.container-xxl.bg-white.radius-md
+      .row.chat-row
+        .col-12.col-md-4.chat-aside.border-right-md
+          include pug/components/nav-chat-page.pug
+          aside#pills-tabContent.overflow-scroll.tab-content.chat-aside-main
+            include pug/components/contacts.pug
+            include pug/components/chats.pug
+            include pug/components/profile.pug
+            include pug/components/current-chat.pug
+        .col-12.col-md-8.chat-main
+          include pug/components/current-chat.pug
+    script(src='js/index.min.js' type='module')
