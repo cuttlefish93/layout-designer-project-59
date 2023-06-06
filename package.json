@@ -26,8 +26,6 @@
     "gulp-strip-css-comments": "^2.0.0",
     "gulp-svg-sprite": "^2.0.3",
     "gulp-uglify-es": "^3.0.0",
-    "pug-lint": "^2.7.0",
-    "pug-lint-config-clock": "^2.0.0",
     "sass": "^1.62.1",
     "stylelint": "^15.6.3",
     "stylelint-config-rational-order": "^0.1.2",
