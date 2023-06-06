@@ -1,3 +1,4 @@
+/* Classes for titles */
 .title-1 {
   font-size: 1.5rem;
   font-weight: 700;
@@ -18,3 +19,9 @@
   color: $gray-600;
   font-size: 0.875rem;
 }
+
+/* Classes for images */
+.avatar-sm {
+  @include avatar-image(50px, 50px, 50%);
+}
+

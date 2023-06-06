@@ -1,7 +1,6 @@
 @import "../../node_modules/bootstrap/scss/bootstrap";
 @import 'mixins';
-@import 'utils/title';
-@import 'utils/avatar';
+@import 'utilities/utilities';
 @import 'components/nav';
 @import 'components/contacts';
 @import 'components/search-panel';
@@ -43,11 +42,9 @@
 
   @include media-breakpoint-up(md) {
     height: calc(100vh - 24px * 2);
-    border-radius: 1rem;
 
     &-aside {
       display: block;
-      border-right: 1px solid $gray;
     }
 
     &-main {
